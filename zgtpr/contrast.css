@@ -1,0 +1,16 @@
+body {
+    background: black;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+.box {
+    background: black !important;
+}
+
+.logo, .access > img {
+    filter: invert();
+}

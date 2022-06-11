@@ -1,0 +1,246 @@
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("fonts/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+    src: url("fonts/SourceSansPro-Bold.ttf");
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0%;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+body {
+    background-color: #e5e5f7;
+    background: repeating-linear-gradient( -45deg, #fffcf0, #fffcf0 100px, white 100px, white 200px );
+    background-attachment: fixed;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 20px 50px;
+    max-width: 1000px;
+    font-family: "Source Sans Pro";
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+table {
+    width: 100%;
+    border-spacing: 6px;
+}
+
+td {
+    border: 4px solid #dadada;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 0px 20px;
+    margin: 10px;
+}
+
+th {
+    font-weight: normal;
+    text-align: left;
+}
+
+.rtd {
+    width: 150px;
+    border: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation > a {
+    font-weight: bold;
+    padding: 10px;
+    padding-top: 15px;
+}
+
+.navigation > a:not(.logo)::after {
+    position: relative;
+    width: 0;
+    height: 3px;
+    margin-top: 2px;
+    background: rgb(243, 186, 0);
+    display: block;
+    content: "";
+    transition: 1s width;
+}
+
+.navigation > a:not(.logo):hover::after {
+    width: 100%;
+    height: 3px;
+}
+
+.access > img {
+    cursor: pointer;
+    padding: 10px;
+    width: 24px;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo > img {
+    height: 40px;
+}
+
+.box {
+    padding: 5px 30px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+}
+
+.right-bubble {
+    border-bottom-right-radius: 0;
+    margin-left: 15%;
+}
+
+.left-bubble {
+    border-bottom-left-radius: 0;
+    margin-right: 15%;
+}
+
+.banner {
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.yellow.box {
+    background: rgb(255, 217, 93);
+}
+
+.gray.box {
+    background: rgb(236, 236, 236);
+}
+
+button {
+    cursor: pointer;
+    background: rgb(243, 186, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: inherit;
+    transition: 0.5s background;
+}
+
+button:hover {
+    background: rgb(233, 178, 0);
+}
+
+.page-links > a {
+    display: inline-block;
+    width: 200px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border: 5px solid #dadada;
+    border-radius: 30px 30px 30px 0;
+    transition: 0.2s border-color;
+}
+
+.page-links > a:hover {
+    border-color: rgb(255, 217, 93);
+}
+
+.page-links > a > img {
+    width: 72px;
+}
+
+.link {
+    position: relative;
+    font-weight: 600;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 3px;
+    background: rgb(243, 186, 0);
+    bottom: -4px;
+    left: 0;
+    transition: width 0.2s;
+}
+
+.link:hover::before {
+    width: 100%;
+}
+
+.anim {
+    animation: opacity 1s;
+    animation-fill-mode: backwards;
+}
+
+.anim.a {
+    animation-delay: 0s;
+}
+
+.anim.b {
+    animation-delay: 0.1s;
+}
+
+.anim.c {
+    animation-delay: 0.2s;
+}
+
+.anim.d {
+    animation-delay: 0.3s;
+}
+
+.anim.e {
+    animation-delay: 0.4s;
+}
+
+.anim.f {
+    animation-delay: 0.5s;
+}
+
+.grid-large {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 20px;
+}
+
+.grid-large > img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.grid-small {
+    display: grid;
+    grid-template-columns: 5% 45% 5% 45%;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.grid-small > img {
+    width: 100%;
+}
